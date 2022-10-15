@@ -1,0 +1,54 @@
+@font-face {
+  font-family: Poppin;
+  src: url("./Poppins.ttf");
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background: #131418;
+  font-family: Poppin;
+}
+
+#career-page-card:hover > #card-action{
+  display: flex;
+}
+
+#card-action{
+  display: none;
+}
+
+#payrill-spinner{
+  animation:spinner .3s ease-in infinite;
+  border-radius: 30px;
+  transition: .1s all;
+}
+
+@keyframes spinner {
+  0%{
+    transform: rotate(0deg);
+    transition: .1s all;
+  }
+/* 
+  50%{
+    transform: rotate(160deg);
+  } */
+
+  100%{
+    transform: rotate(360deg);
+    transition: .1s all;
+  }
+}
+
+#video-cont::-webkit-scrollbar{
+  width: 2px;
+}
+
+#video-cont::-webkit-scrollbar-thumb{
+  background: #5452d321;
+}

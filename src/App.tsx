@@ -11,7 +11,8 @@ import CandidateDocument from './pages/Career/candidateDoc'
 import Dashboard from './pages/Dashboard'
 import HomePage from './pages/Home'
 import JobApplications from './pages/JobApplication/jobApplication'
-import Meet from './pages/Meet'
+import Appointments from './pages/Meet/appointments'
+import Meet from './pages/Meet/eventMeeting'
 
 
 
@@ -33,8 +34,9 @@ function App() {
           <Route path='/career' element={
             <ProtectedRoute children={<CareerAuthorPage />} />
           } />
-          <Route path='/meet/:meetId' element={
-            <ProtectedRoute children={<Meet />} />
+          <Route path='/meet/:meetId' element={<Meet/>} />
+          <Route path='/appointments' element={
+            <ProtectedRoute children={<Appointments />} />
           } />
           <Route path='/career/:career_id' element={<CandidateCareerPage />} />
           <Route path='/candidate/:candidateId' element={<CandidateDocument />} />

@@ -76,7 +76,7 @@ function JobApplications() {
                     return
                 }
                 setData((prev: any)=>({...prev, ["candidates"]: data.data}))
-                console.log(data.data)
+                // console.log(data)
 
             } catch (e: any) {
                 setLoader((prev: any)=>({...prev,  ["fetchCandidates"]: false}))

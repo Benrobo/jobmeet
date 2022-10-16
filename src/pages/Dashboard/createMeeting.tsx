@@ -93,7 +93,7 @@ function CreateMeeting({active, toggleMeetingActive}: any) {
         return
       }
 
-      setCandidates(data.data)
+      setCandidates(data.data || [])
     } catch (e: any) {
       setLoader((prev: any)=>({...prev,  ["fetchCandidates"]: false}))
       notif.error(e.message)
@@ -206,7 +206,7 @@ function Step1({toggleSteps, handleInputData, selectedId, candidates}: any){
           Loader.fetchCandidates ? 
             <option value="">Loading...</option>
             :
-            candidates.length === 0 ?
+            candidates?.length === 0 ?
               <option value="">No candidates available</option>
               :
             candidates.map((data: any)=>(

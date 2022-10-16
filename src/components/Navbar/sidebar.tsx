@@ -31,11 +31,11 @@ function SideBar({active}: any) {
                 <AiFillDashboard className={`text-white-100 text-[20px] `} /> Overview
               </li>
             </Link>
-            {/* <Link to="/appointments" className="w-full">
+            <Link to="/appointments" className="w-full">
             <li className={`w-full flex flex-row items-center justify-start gap-3 text-white-100 text-[15px] list-none px-3 py-4 ${isEqual(active, "appointments") ? "bg-blue-400 " : ""} hover:bg-blue-300 font-extrabold cursor-pointer`}>
             <AiFillCalendar className={`text-white-100 text-[20px] `} /> Appointments
             </li>
-            </Link> */}
+            </Link>
             <Link to="/job/applications" className="w-full">
             <li className={`w-full flex flex-row items-center justify-start gap-3 text-white-100 text-[15px] list-none px-3 py-4 ${isEqual(active, "jobApplication") ? "bg-blue-400 " : ""} hover:bg-blue-300 font-extrabold cursor-pointer`}>
             <BsBriefcaseFill className={`text-white-100 text-[20px] `} /> Job Applications
@@ -47,7 +47,7 @@ function SideBar({active}: any) {
             <GoBrowser className={`text-white-100 text-[20px] `} /> Career Pages
             </li>
             </Link>
-            {/* <Link to="/meet/:meetId" className="w-full">
+            {/* <Link to="/meeting" className="w-full">
             <li className={`w-full flex flex-row items-center justify-start gap-3 text-white-100 text-[15px] list-none px-3 py-4 ${isEqual(active, "meet") ? "bg-blue-400 " : ""} hover:bg-blue-300 font-extrabold cursor-pointer`}>
             <AiFillVideoCamera className={`text-white-100 text-[20px] `} /> Meet
             </li>

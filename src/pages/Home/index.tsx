@@ -38,6 +38,7 @@ function HomePage() {
   async function fetchAllCareers(){
     try {
       setLoader((prev: any)=>({...prev,  ["getCareer"]: true}))
+    //   const url = "http://localhost:5000/api/career/getAll"
       const url = "http://localhost:5000/api/career/getAll"
       const {res, data} = await Fetch(url, {
         method: "GET",
@@ -158,7 +159,7 @@ function HomePage() {
     <div className="w-full h-screen relative overflow-x-hidden ">
         <div className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden text-center">
             <h1 className="text-blue-300 font-extrabold font-sans text-[70px] ">
-                MeetVast
+                JobMeet
             </h1>
             <p className="text-white-300 font-extrabold ">
                 Ease the Process of Job Application for both <span className="text-blue-200 text-[15px] underline ">Hiring Manager</span> & <span className="text-blue-200 text-[15px] underline ">Candidates</span>

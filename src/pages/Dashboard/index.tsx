@@ -160,10 +160,11 @@ function AppointmentsCard({meetingData, key}: any){
 
   function format24HrTime(time: string){
     const mdt = time.replace(/\d/gi, "").replace(":", "")
-    const newTime = time.replace("AM", "").replace("PM", "").split(":");
-    if(+newTime[0] > 12) return `12:${newTime[1]}${mdt}`
+    const newTime : any = time.replace("AM", "").replace("PM", "").split(":");
+    if(+newTime[0] > 12) return `${newTime[0] - 12}:${newTime[1]}${mdt}`
     return time;
   }
+  // console.log(time)
 
   
   useEffect(()=>{
@@ -177,7 +178,7 @@ function AppointmentsCard({meetingData, key}: any){
         <div id="info" className="relative flex flex-col items-start justify-start">
           <p className='text-[15px] font-extrabold text-white-100 '>{meetingData.title}</p>
           <p className='text-[12px] font-extrabold text-white-200'>
-            ( {moment(new Date(+meetingData?.createdAt)).startOf('days').fromNow()} ) {format24HrTime(meetingData.startTime)} - {format24HrTime(meetingData.endTime)}
+            ( {moment(meetingData?.startDate).format("LL")} ) {format24HrTime(meetingData.startTime)} - {format24HrTime(meetingData.endTime)}
           </p>
         </div>
       </div>
@@ -190,9 +191,9 @@ function AppointmentsCard({meetingData, key}: any){
       </p>
       <br />
       <div className="w-full flex flex-row items-center justify-between">
-        <Link to={`/meet/${meetingData.id}`} className="w-full">
-          <Button data-id={meetingData.id} text={isExpired() ? "Meeting Expired" : 'Join Event'} style={{transform: "scale(1)"}} type={isExpired() ? "secondary" : "primary"} long={true} disabled={isExpired()} />
-        </Link>
+        <a href={`${window.location.origin}/meet/${meetingData.id}`} target="_blank" className="w-full">
+          <Button data-id={meetingData.id} text={'Start Meeting'} style={{transform: "scale(1)"}} type={"primary"} long={true} />
+        </a>
       </div>
     </div>
   )
@@ -224,6 +225,8 @@ const getReturnValues = (countDown: number) => {
   );
   const min = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60));
   const sec = Math.floor((countDown % (1000 * 60)) / 1000);
+
+  // console.log(days, hour, min, sec)
 
   return [days, hour, min, sec];
 };

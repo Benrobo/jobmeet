@@ -8,6 +8,7 @@ import Fetch from '../../utils/fetch';
 import { sendMail } from '../../utils/sendMail';
 import Notification from '../../utils/toast';
 import {AiFillGithub} from "react-icons/ai"
+import { Link } from 'react-router-dom';
 
 const notif= new Notification(10000)
 
@@ -157,6 +158,9 @@ function HomePage() {
 
   return (
     <div className="w-full h-screen relative overflow-x-hidden ">
+        <Link to="/auth">
+            <button className="w-[150px] absolute z-[100] top-5 right-4 px-3 py-3 bg-blue-300 rounded-[30px] text-white-100 font-extrabold">Get Started</button>
+        </Link>
         <div className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden text-center">
             <h1 className="text-blue-300 font-extrabold font-sans text-[70px] ">
                 JobMeet
@@ -164,7 +168,6 @@ function HomePage() {
             <p className="text-white-300 font-extrabold ">
                 Ease the Process of Job Application for both <span className="text-blue-200 text-[15px] underline ">Hiring Manager</span> & <span className="text-blue-200 text-[15px] underline ">Candidates</span>
             </p>
-
             <br /> 
             <br />
             <br />

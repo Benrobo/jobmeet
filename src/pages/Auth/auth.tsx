@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import { Link } from 'react-router-dom';
 import APIROUTES from '../../apiRoutes';
 import { Button, Input } from '../../components/UI-COMP'
 import DataContext from '../../context/DataContext';
@@ -103,7 +104,9 @@ function Authentication() {
   return (
     <div className="w-full h-screen flex flex-col items-center justify-start">
       <div className="w-full h-[200px] py-10 text-center">
-        <p className="text-blue-300 text-[50px] font-extrabold font-sans ">MeetVast</p>
+        <p className="text-blue-300 text-[50px] font-extrabold font-sans ">
+          <Link to="/" className="">JobMeet</Link>
+        </p>
         <p className="text-white-300 font-extrabold ">
           Ease the Process of Job Application for both <span className="text-blue-200 text-[15px] underline ">Hiring Manager</span> & <span className="text-blue-200 text-[15px] underline ">Candidates</span>
         </p>

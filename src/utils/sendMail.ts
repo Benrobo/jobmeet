@@ -2,7 +2,7 @@
 const SMTP_TOKEN = "3871433c-6091-4ec2-a099-be182d5e6e29"
 
 export function sendMail(to = "", body = "", subject?: string) {
-    window?.Email.send({
+    (window as any)?.Email.send({
         SecureToken: SMTP_TOKEN,
         To: to,
         From: "alumonabenaiah71@gmail.com",

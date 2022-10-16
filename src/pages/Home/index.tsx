@@ -9,6 +9,7 @@ import { sendMail } from '../../utils/sendMail';
 import Notification from '../../utils/toast';
 import {AiFillGithub} from "react-icons/ai"
 import { Link } from 'react-router-dom';
+import { BASE_URL } from '../../config';
 
 const notif= new Notification(10000)
 
@@ -40,7 +41,7 @@ function HomePage() {
     try {
       setLoader((prev: any)=>({...prev,  ["getCareer"]: true}))
     //   const url = "http://localhost:5000/api/career/getAll"
-      const url = "http://localhost:5000/api/career/getAll"
+      const url = `${BASE_URL}/career/getAll`
       const {res, data} = await Fetch(url, {
         method: "GET",
       })

@@ -106,7 +106,7 @@ function CandidateCareerPage() {
   }
 
   
-  function storeMeetvastCareerIds(){
+  function storeJobmeetCareerIds(){
     let storage : any[] = candidateStatus?.careersId || [];
     if(storage.includes(career_id)) return;
     storage.push(career_id)
@@ -140,7 +140,7 @@ function CandidateCareerPage() {
 
       notif.success(data.message)
       await sleep(1)
-      storeMeetvastCareerIds()
+      storeJobmeetCareerIds()
       window.location.reload()
 
     } catch (e: any) {

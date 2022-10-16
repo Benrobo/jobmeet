@@ -1,12 +1,12 @@
-# MeetVast App
+# JobMeet App
 
 Ease Job Application Process for both `Hiring Manager` & `Candidates`
 
 > [SHORT DEMO VIDEO](https://youtu.be/1vzvBWqT20E)
 
-> WebApp [App](https://github.com/Benrobo/meetvast)
+> WebApp [App](https://github.com/Benrobo/jobmeet)
 
-> API [API](https://github.com/Benrobo/meetvast-api)
+> API [API](https://github.com/Benrobo/jobmeet-api)
 
 
 
@@ -20,8 +20,8 @@ In the process of receiving this `Candidate / Talent` provided documents, `Hirin
 
 But, what if we could have all this features listed above in a single application, making the process of hiring intuitive, easier and flexible. Well, this is where `MeetVast` comes into play.
 
-## What is MeetVast ? 
-Meetvast is just a web application that chooses to fufill the above requirements from:
+## What is JobMeet ? 
+JobMeet is just a web application that chooses to fufill the above requirements from:
 
 - [x] Creating of job / career page for candidates.
 - [x] Receiving of candidates applications.
@@ -30,7 +30,7 @@ Meetvast is just a web application that chooses to fufill the above requirements
 - [x] Schedule a onetime secure video conferencing meeting for that candidate.
 - [x] Conduct the meeting from the same application without making use of any other third party app.
 
-Those are the above feature `MeetVast` aims to solve.
+Those are the above feature `JobMeet` aims to solve.
 
 ## Challenges I ran Into.
 Some of the challenges I ran into while developing this application from ground up were : 
@@ -39,8 +39,8 @@ Some of the challenges I ran into while developing this application from ground 
 ## Archivement I'm Proud Of?
 Despite facing different problems during development of this application, am really glad I get to work with some technologies I havent worked before with. This provide room for learning while building. technologies like `Agora SDK`, `HarperDB (NoSQL & SQL database)`, `Typescript`.
 
-## Plans for meetvast
-MeetVast is at his early `MVP` stage. with adequate time and resources, I plan to improve this application by ading other complex feature within the app which could drive users engagement from both the `hiring manager` & `talents`
+## Plans for JobMeet
+JobMeet is at his early `MVP` stage. with adequate time and resources, I plan to improve this application by ading other complex feature within the app which could drive users engagement from both the `hiring manager` & `talents`
 
 ## Technologies Used.
 Below are the techologies used in developing this application.
@@ -50,7 +50,7 @@ Below are the techologies used in developing this application.
 - [x] HarperDB ( `NoSQL` & `SQL` ) database.
 - [x] AgoraSDK (A `video / audio / chat` conferencing platform) (feature isnt working for now due to the problem I had with my pc webcam).
 
-## Images of meetvast
+## Images of Jobmeet
 ![img](https://raw.githubusercontent.com/Benrobo/meetvast/master/githubImg/2.png)
 
 ![img](https://raw.githubusercontent.com/Benrobo/meetvast/master/githubImg/3.png)
@@ -70,14 +70,14 @@ Below are the techologies used in developing this application.
 
 ![img](https://raw.githubusercontent.com/Benrobo/meetvast/master/githubImg/mail.PNG)
 
-## Setting up MeetVast
-MeetVast can be run locally along with the [Backend API](https://github.com/Benrobo/meetvast-api).
+## Setting up JobMeet
+JobMeet can be run locally along with the [Backend API](https://github.com/Benrobo/jobmeet-api).
 
 > Make sure you have the latest version of Nodejs and NPM
 
 1. Clone the repo
 ```
-git clone https://github.com/Benrobo/meetvast.git
+git clone https://github.com/Benrobo/jobmeet.git
 ```
 2. Install all dependencies
 ```

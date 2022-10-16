@@ -22,7 +22,7 @@ function SideBar({active}: any) {
     <div className="w-[250px] h-screen bg-dark-200 ">
         <div id="head" className="w-full flex flex-row items-center justify-center p-2 mt-5 gap-5">
             <AiOutlineVideoCamera className='text-blue-200 text-[20px] ' />
-            <h2 className='text-blue-200 font-extrabold text-[20px] '>MeetVast</h2>
+            <h2 className='text-blue-200 font-extrabold text-[20px] '>JobMeet</h2>
         </div>
         <br />
         <div className="w-full flex flex-col items-start justify-start">

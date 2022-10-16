@@ -54,6 +54,26 @@ function Meet() {
     }
   }
 
+  function isExpired(date: string){
+    let currDate = new Date(), hr = currDate.getHours(), month = currDate.getMonth() + 1 , day = currDate.getDay()
+    const currdate = new Date(date);
+    const currM = currdate.getMonth() + 1,
+          currYr = currdate.getFullYear(),
+          currDay = currdate.getDay();
+
+    if(currYr === currDate.getFullYear()){
+        if(month > currM) return true;
+        if(month === currM){
+            if(day > currDay) return true;
+            return false
+        }
+        return false
+    }
+    if(currDate.getFullYear() > currYr) return true;
+    return false
+    
+  }
+
   return (
     <div className="h-screen w-full flex flex-col items-center justify-center">
     
@@ -73,7 +93,10 @@ function Meet() {
                 <p className="text-white-200">Oops...This meeting is no longer available.</p>
             </div>
         :
-        <VideoCall title={meetingInfo?.title} />
+        <>
+            {console.log(isExpired(meetingInfo?.startDate))}
+            <VideoCall title={meetingInfo?.title} />
+        </>
     }
     
     </div>

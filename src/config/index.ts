@@ -1,7 +1,9 @@
 
 
 
-export const BASE_URL = `http://localhost:5000/api`
+// export const BASE_URL = `http://localhost:5000/api`
+
+export const BASE_URL = `https://jobmeet-api-production.up.railway.app/api`
 
 export const AGORA_ID = "85bb274a806840cba8a7a3f45f0c2afe"
 

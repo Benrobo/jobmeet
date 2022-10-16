@@ -5,8 +5,8 @@ export function sendMail(to = "", body = "", subject?: string) {
     (window as any)?.Email.send({
         SecureToken: SMTP_TOKEN,
         To: to,
-        From: "alumonabenaiah71@gmail.com",
-        Subject: subject || "MeetVast.",
+        From: "jobmeet@gmail.com",
+        Subject: subject || "JobMeet.",
         Body: body
     }).then((message: any) => {
         console.log(message);
